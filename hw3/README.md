@@ -11,7 +11,7 @@ text --tokenizer--> ids --GPT(임베딩 HW1 + 어텐션 HW3)--> context_vec
 `GPT`가 이제 `self.att`로 `MultiHeadAttention`을 사용합니다 (임베딩 -> 어텐션).
 
 LayerNorm, residual(shortcut), FFN은 self-attention 바깥을 감싸는 구조라서 다음 과제에서
-TransformerBlock으로 다룹니다. 교재 3.6.1절(`CausalAttention`을 여러 개 쌓는 방식)은 읽어만 보세요.
+TransformerBlock으로 다룹니다.
 
 ## 할 일 (2단계)
 `MultiHeadAttention.forward()`의 두 곳을 채우세요. (교재 3.6.2)
@@ -65,7 +65,7 @@ PASSED
 - head별 table은 랜덤 입력이라 torch 버전에 따라 숫자가 조금 다를 수 있지만 모양은 같아야 합니다.
 
 ## 리포트
-1. 교재 3.6.1(`CausalAttention`을 여러 개 쌓기)과 3.6.2(이번 구현)는 출력 크기와 계산 방식이 어떻게 다른가요?
-2. `view`로 나눈 뒤 `transpose(1, 2)`를 하는 이유는? (head 차원이 어디로 가는지)
+1. `view(b, num_tokens, num_heads, head_dim)`으로 `d_out`을 나누는 이유는? (마지막 차원이 어떻게 쪼개지는지)
+2. `view` 다음에 `transpose(1, 2)`를 하는 이유는? (head 차원이 어디로 가는지)
 3. softmax 전에 `d_out`이 아니라 `keys.shape[-1]`(= `head_dim`)의 제곱근으로 나누는 이유는?
 4. `out_proj`는 무슨 역할을 하나요?
