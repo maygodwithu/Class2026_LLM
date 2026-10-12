@@ -7,3 +7,4 @@
 - **반드시 각 `hw` 폴더 안으로 들어가서 실행하세요.** (예: `cd hw3` 후 `python -m pytest test_hw3.py -v -s`)
   저장소 맨 위에서 `pytest`를 한 번에 돌리면 폴더끼리 파일 이름(`model.py` 등)이 겹쳐 오류가 납니다.
 - 필요한 패키지: `pip install torch tiktoken pytest numpy`
+- `solutions/`: 제출 기한이 지난 과제의 정답 예시.
