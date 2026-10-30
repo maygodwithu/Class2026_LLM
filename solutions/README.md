@@ -6,5 +6,6 @@
 |---|---|
 | `hw1_model.py` | HW1 -- 입력 표현 (토큰 임베딩 + 위치 임베딩) |
 | `hw2_model.py` | HW2 -- Causal Self-Attention (head 1개) |
+| `hw3_model.py` | HW3 -- Multi-Head Attention |
 
 확인하려면 과제 폴더의 `test_hwN.py`, `tokenizer.py`와 같은 곳에 `model.py`라는 이름으로 두고 실행하세요.
